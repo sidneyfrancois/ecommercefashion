@@ -1,0 +1,18 @@
+.container-voce {
+  display: flex;
+  flex-direction: column;
+}
+
+.dados-user {
+  margin: 8px 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  border: 1px solid grey;
+}
+
+.link-sair {
+  color: black;
+}

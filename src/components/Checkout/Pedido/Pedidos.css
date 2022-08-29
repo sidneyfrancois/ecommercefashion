@@ -1,0 +1,17 @@
+.container-pedido {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header-products {
+  display: flex;
+  justify-content: space-between;
+}

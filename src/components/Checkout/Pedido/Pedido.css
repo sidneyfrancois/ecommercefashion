@@ -1,0 +1,10 @@
+.container-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-item div {
+  color: rgb(14, 13, 13);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

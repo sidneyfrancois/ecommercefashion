@@ -1,0 +1,60 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  margin: 5px;
+}
+
+th,
+td {
+  border: 1px solid #f7d6e7;
+}
+
+th {
+  padding: 8px;
+  border: 1px solid #f7d6e7;
+  border-radius: 4px;
+  box-shadow: 4px 3px 16px -1px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+th .opcao-envio {
+  display: flex;
+}
+
+.prazo-aviso {
+  height: 15px;
+  display: block;
+  margin: 6px;
+  padding: 15px 0;
+  border: 1px solid #f7d6e7;
+  border-radius: 5px;
+  background-color: #f7d6e7;
+}
+
+.prazo-aviso p {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.observacoes {
+  display: block;
+  margin: 3px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.observacoes textarea {
+  padding: 5px;
+  width: 100%;
+  background-color: #f7d6e7;
+}
+
+.observacoes h4 {
+  margin: 5px 0;
+}
+
+.opcao-voltar {
+  margin: 8px;
+  color: black;
+}

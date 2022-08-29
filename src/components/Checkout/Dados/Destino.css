@@ -1,0 +1,21 @@
+.endereco {
+  width: 85%;
+  height: 150px;
+  margin: 10px auto;
+  border: 1px solid #f7d6e7;
+  box-shadow: 1px 3px 3px 1px gray;
+  border-radius: 4px;
+  background-color: #f7d6e7;
+  text-align: center;
+}
+
+.endereco-cliente {
+  text-align: left;
+  margin: 10px;
+}
+
+.envio-next {
+  text-align: right;
+  margin-top: 30px;
+  padding: 10px;
+}
