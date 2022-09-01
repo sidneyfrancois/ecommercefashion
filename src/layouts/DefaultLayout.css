@@ -5,34 +5,28 @@
 }
 
 header {
-  font-family: "Satisfy", cursive;
   background-color: #efb9d6;
   width: 100%;
   height: 100%;
   padding: 2px;
 }
 
-.container {
-  font-family: "Satisfy", cursive;
-  max-width: 100%;
-  height: 100px;
+nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.logo {
-  width: 5%;
-  margin: 5px;
-  padding: 10px;
+.sacola {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
-.logo-sacola {
-  width: 2%;
-}
-
-.menu {
-  width: 80%;
+.sacola label {
+  margin: 4px;
+  margin-bottom: 8px;
+  text-decoration: none;
 }
 
 .option {
@@ -41,9 +35,16 @@ header {
   text-align: center;
   padding-right: 40px;
   font-size: 30px;
+  margin: 12px;
 }
 
-.option label {
-  font-size: 1rem;
-  padding: 4px;
+.logo {
+  width: 20%;
+}
+
+.logo-sacola {
+  width: 10%;
+  margin: 5px;
+  padding: 5px;
+  text-align: left;
 }

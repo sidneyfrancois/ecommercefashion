@@ -25,9 +25,11 @@ export function DefaultLayout() {
               <NavLink className="option" to="/login" title="Sobre">
                 Login
               </NavLink>
-              <NavLink className="option" to="/checkout">
-                <img className="logo-sacola" src={carrinhoLogo} />
-                <label>{qtdItems}</label>
+              <NavLink to="/checkout">
+                <div className="sacola">
+                  <img className="logo-sacola" src={carrinhoLogo} />
+                  <label>{qtdItems}</label>
+                </div>
               </NavLink>
             </nav>
           </div>
