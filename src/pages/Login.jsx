@@ -1,50 +1,66 @@
 import "./Login.css";
 import axios from "axios";
-import { useEffect } from "react";
+import { useState } from "react";
+import { useLogin } from "../contexts/LoginContext";
 
 const origin = "http://localhost:3333";
+const login = {};
 
 export function Login() {
-  useEffect(() => {
+  const [useEmail, setEmail] = useState("");
+  const [usePassword, setPassword] = useState("");
+
+  const { setUserLogin } = useLogin();
+
+  function authenticateUser() {
     axios
       .post(`${origin}/auth`, {
-        email: "sidney@email.com",
-        password: "123",
+        email: useEmail,
+        password: usePassword,
       })
-      .then((response) => console.log(response))
+      .then((response) => {
+        console.log(response);
+        login.email = response.data.user.email;
+        login.token = response.data.token;
+
+        setUserLogin(login);
+      })
       .catch((err) => {
         console.log("Erro: " + err);
       });
-  });
+  }
 
   return (
-    <div className="form">
-      <div className="title">Bem Vindo!</div>
-      <div className="subtitle">Crie sua conta</div>
-      <div className="input-container ic1">
-        <input id="firstname" className="input" type="text" placeholder=" " />
-        <div className="cut"></div>
-        <label for="firstname" className="placeholder">
-          First name
-        </label>
-      </div>
-      <div className="input-container ic2">
-        <input id="lastname" className="input" type="text" placeholder=" " />
-        <div className="cut"></div>
-        <label for="lastname" className="placeholder">
-          Last name
-        </label>
-      </div>
-      <div className="input-container ic2">
-        <input id="email" className="input" type="text" placeholder=" " />
-        <div className="cut cut-short"></div>
-        <label for="email" className="placeholder">
-          Email
-        </label>
-      </div>
-      <button type="text" className="submit">
-        Registrar
-      </button>
+    <div className="loginForm">
+      <form method="post">
+        <div className="box">
+          <h1>Login</h1>
+
+          <input
+            type="email"
+            className="email"
+            placeholder="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <input
+            type="password"
+            className="email"
+            placeholder="senha"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <a href="#">
+            <div className="btn" onClick={authenticateUser}>
+              Logar
+            </div>
+          </a>
+
+          <a href="#">
+            <div id="btn2">Registrar</div>
+          </a>
+        </div>
+      </form>
     </div>
   );
 }

@@ -1,13 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
 import { CartContextProvider } from "./contexts/CartContext";
 import { Router } from "./Router";
+import { LoginContextProvider } from "./contexts/LoginContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <CartContextProvider>
-        <Router />
-      </CartContextProvider>
+      <LoginContextProvider>
+        <CartContextProvider>
+          <Router />
+        </CartContextProvider>
+      </LoginContextProvider>
     </BrowserRouter>
   );
 }
