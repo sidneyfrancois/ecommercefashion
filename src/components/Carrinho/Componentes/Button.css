@@ -1,0 +1,26 @@
+#subtotal {
+    height: 8vh;
+    position: relative;
+}
+
+#subtotal button{
+    background-color: #1f1f1f;
+    border: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    box-shadow: 1px -1px 4px 0px rgba(0, 0, 0, 0.575);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#subtotal button:hover {
+    background-color: rgb(180, 168, 177);
+    color: black;
+}
